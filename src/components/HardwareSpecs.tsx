@@ -27,17 +27,17 @@ export const HardwareSpecs: React.FC = () => {
       });
 
   return (
-    <section id="hardware" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#030406] border-t border-dashed border-black/10 dark:border-white/10 relative transition-colors duration-300">
+    <section id="hardware" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#1A1614] border-t border-black/10 dark:border-white/10 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-16 space-y-4">
-          <TechnicalBadge number="07" label="HARDWARE ARCHITECTURE & INTERCONNECTS" color="orange" />
+          <TechnicalBadge number="07" label="Hardware Architecture & Interconnects" color="orange" />
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em] leading-[1.05]">
-            ENGINEERED TO WITHSTAND<br />
-            <span className="text-[#FF5500] dark:text-[#FF7733]">THE REAL WORLD.</span>
+            Engineered to withstand<br />
+            <span className="text-[#FF5500] dark:text-[#FF9E8C]">the real world.</span>
           </h2>
-          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-[#C8BDB6] leading-relaxed font-normal">
             No fragile single-board prototypes. Every sensor, bus interconnect, power rail, and thermal dissipation path
             is architected into a sealed IP65 chest unit designed for all-day wearable reliability.
           </p>
@@ -73,22 +73,22 @@ export const HardwareSpecs: React.FC = () => {
                   onClick={() => setActiveComp(item)}
                   className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between group relative ${
                     isSelected
-                      ? 'bg-white dark:bg-white/[0.06] border-[#FF5500] dark:border-[#FF7733]/60 shadow-md dark:shadow-[0_0_20px_rgba(255,119,51,0.15)] text-zinc-950 dark:text-white'
-                      : 'bg-white/70 dark:bg-[#06080D] border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-200'
+                      ? 'bg-white dark:bg-[#3D1E1A]/40 dark:backdrop-blur-md border-[#FF5500] dark:border-[#FF9E8C]/60 shadow-md dark:shadow-[0_4px_20px_rgba(255,158,140,0.15)] text-zinc-950 dark:text-white'
+                      : 'bg-white/70 dark:bg-[#251E1C]/40 dark:backdrop-blur-md border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-200'
                   }`}
                 >
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono text-[#FF5500] dark:text-[#FF7733] uppercase tracking-widest block">
+                    <span className="text-[10px] font-mono text-[#FF5500] dark:text-[#FF9E8C] uppercase tracking-widest block font-semibold">
                       {item.connection}
                     </span>
                     <h4 className="text-sm font-semibold text-zinc-950 dark:text-white tracking-tight">
                       {item.component}
                     </h4>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1 font-normal">
+                    <p className="text-xs text-zinc-500 dark:text-[#8E827B] line-clamp-1 font-normal">
                       {item.purpose}
                     </p>
                   </div>
-                  <span className="text-xs font-mono text-zinc-700 dark:text-zinc-300 bg-black/5 dark:bg-white/5 px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 shrink-0 ml-3">
+                  <span className="text-xs font-mono text-zinc-700 dark:text-[#30D158] bg-black/5 dark:bg-[#30D158]/10 px-2.5 py-1 rounded-full border border-black/10 dark:border-[#30D158]/20 shrink-0 ml-3 font-semibold">
                     {item.priceINR}
                   </span>
                 </button>
@@ -97,14 +97,14 @@ export const HardwareSpecs: React.FC = () => {
           </div>
 
           {/* Right Column: Active Component Deep Dive Spec Card */}
-          <div className="lg:col-span-6 bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 text-left space-y-6 relative shadow-lg dark:shadow-2xl transition-colors">
-            <ReticleCorner size={10} className="text-[#FF5500] dark:text-[#FF7733]" />
+          <div className="lg:col-span-6 bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 text-left space-y-6 relative shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
+            <ReticleCorner size={10} className="text-[#FF5500] dark:text-[#FF9E8C]" />
 
             <div className="flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-4">
-              <span className="text-[10px] font-mono text-[#FF5500] dark:text-[#FF7733] uppercase tracking-[0.14em]">
+              <span className="text-[10px] font-mono text-[#FF5500] dark:text-[#FF9E8C] uppercase tracking-[0.14em] font-semibold">
                 HARDWARE DATASHEET // PINOUT
               </span>
-              <span className="text-xs font-mono text-zinc-700 dark:text-zinc-300 bg-black/5 dark:bg-white/5 px-3 py-1 rounded-full border border-black/10 dark:border-white/10">
+              <span className="text-xs font-mono text-zinc-700 dark:text-[#30D158] bg-black/5 dark:bg-[#30D158]/10 px-3 py-1 rounded-full border border-black/10 dark:border-[#30D158]/20 font-semibold">
                 BOM Range: {activeComp.priceINR}
               </span>
             </div>
@@ -113,22 +113,22 @@ export const HardwareSpecs: React.FC = () => {
               <h3 className="text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight">
                 {activeComp.component}
               </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed font-normal">
+              <p className="text-sm text-zinc-600 dark:text-[#C8BDB6] leading-relaxed font-normal">
                 {activeComp.purpose}
               </p>
             </div>
 
             <div className="space-y-4 pt-2">
-              <div className="bg-[#F4F5F7] dark:bg-[#030406] border border-black/10 dark:border-white/10 rounded-xl p-4 space-y-1">
+              <div className="bg-[#F4F5F7] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 rounded-xl p-4 space-y-1">
                 <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
                   Hardware Bus Link & Interface:
                 </span>
-                <span className="text-sm font-mono text-[#059669] dark:text-[#00F5A0] font-semibold">
+                <span className="text-sm font-mono text-[#059669] dark:text-[#30D158] font-semibold">
                   {activeComp.connection}
                 </span>
               </div>
 
-              <div className="bg-[#F4F5F7] dark:bg-[#030406] border border-black/10 dark:border-white/10 rounded-xl p-4 space-y-1">
+              <div className="bg-[#F4F5F7] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 rounded-xl p-4 space-y-1">
                 <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
                   Perception & Safety Function:
                 </span>
@@ -146,12 +146,12 @@ export const HardwareSpecs: React.FC = () => {
         </div>
 
         {/* Complete Hardware Wiring Table */}
-        <div className="bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 text-left space-y-5 relative shadow-lg dark:shadow-2xl transition-colors">
-          <ReticleCorner size={10} className="text-[#0284C7] dark:text-[#00D2FF]" />
+        <div className="bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 text-left space-y-5 relative shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
+          <ReticleCorner size={10} className="text-[#0284C7] dark:text-[#30D158]" />
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-black/10 dark:border-white/10 pb-4">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#0284C7] dark:text-[#00D2FF]">
+              <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#0284C7] dark:text-[#30D158] font-semibold">
                 INTERCONNECT ARCHITECTURE
               </span>
               <h3 className="text-xl sm:text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight mt-0.5">

@@ -15,6 +15,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     try {
       const saved = localStorage.getItem('beepvision-theme');
       if (saved === 'dark' || saved === 'light') return saved;
+      if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
       return 'dark';
     } catch {
       return 'dark';

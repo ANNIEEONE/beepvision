@@ -5,31 +5,31 @@ import { ReticleCorner, TechnicalBadge } from './ReticleCorner';
 
 export const CostBreakdown: React.FC = () => {
   return (
-    <section id="pricing" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#030406] border-t border-dashed border-black/10 dark:border-white/10 relative transition-colors duration-300">
+    <section id="pricing" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#1A1614] border-t border-black/10 dark:border-white/10 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-16 space-y-4">
-          <TechnicalBadge number="12" label="PROTOTYPE BILL OF MATERIALS & ECONOMICS" color="orange" />
+          <TechnicalBadge number="12" label="Prototype Bill of Materials & Economics" color="orange" />
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em] leading-[1.05]">
-            TRANSPARENT PROTOTYPE<br />
-            <span className="text-[#FF5500] dark:text-[#FF7733]">BILL OF MATERIALS.</span>
+            Transparent prototype<br />
+            <span className="text-[#FF5500] dark:text-[#FF9E8C]">bill of materials.</span>
           </h2>
-          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-[#C8BDB6] leading-relaxed font-normal">
             We believe in honest hardware accounting. Below is the exact, unvarnished component breakdown
             for building an individual BeepVision lab prototype unit.
           </p>
         </div>
 
         {/* Prototype Cost Callout Box (Antimetal Signature Style) */}
-        <div className="mb-14 p-8 rounded-2xl bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/20 text-left flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative shadow-lg dark:shadow-2xl transition-colors">
-          <ReticleCorner size={12} className="text-[#FF5500] dark:text-[#FF7733]" />
+        <div className="mb-14 p-8 rounded-2xl bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 text-left flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
+          <ReticleCorner size={12} className="text-[#FF5500] dark:text-[#FF9E8C]" />
 
           <div className="space-y-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#FF5500] dark:text-[#FF7733] block font-semibold">
+            <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#FF5500] dark:text-[#FF9E8C] block font-semibold">
               INDIVIDUAL PROTOTYPE BENCH BUILD ESTIMATE
             </span>
-            <div className="text-4xl sm:text-5xl font-bold text-zinc-950 dark:text-white font-mono tracking-tight">
+            <div className="text-4xl sm:text-5xl font-bold text-zinc-950 dark:text-[#30D158] font-mono tracking-tight">
               {TOTAL_ESTIMATE_RANGE}
             </div>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
@@ -37,8 +37,8 @@ export const CostBreakdown: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-[#F4F5F7] dark:bg-[#030406] border border-black/10 dark:border-white/10 rounded-xl p-4 space-y-2 max-w-md font-mono text-xs text-zinc-700 dark:text-zinc-300">
-            <div className="flex items-center gap-2 text-[#059669] dark:text-[#00F5A0] font-semibold uppercase tracking-wider">
+          <div className="bg-[#F4F5F7] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 rounded-xl p-4 space-y-2 max-w-md font-mono text-xs text-zinc-700 dark:text-zinc-300">
+            <div className="flex items-center gap-2 text-[#059669] dark:text-[#30D158] font-semibold uppercase tracking-wider">
               <TrendingDown className="w-4 h-4" /> Production Volume Trajectory
             </div>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal">
@@ -50,7 +50,7 @@ export const CostBreakdown: React.FC = () => {
         {/* Economic Comparison Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left">
           
-          <div className="bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 space-y-3 relative shadow-md dark:shadow-xl transition-colors">
+          <div className="bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-2xl p-6 space-y-3 relative shadow-md dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
             <ReticleCorner size={8} className="text-zinc-400 dark:text-zinc-600" />
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-zinc-400 tracking-wider">Traditional Mobility Companion</span>
             <h3 className="text-xl font-semibold text-zinc-950 dark:text-white tracking-tight">Trained Guide Dog</h3>
@@ -60,7 +60,7 @@ export const CostBreakdown: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 space-y-3 relative shadow-md dark:shadow-xl transition-colors">
+          <div className="bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-2xl p-6 space-y-3 relative shadow-md dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
             <ReticleCorner size={8} className="text-zinc-400 dark:text-zinc-600" />
             <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-zinc-400 tracking-wider">Imported Ultrasonic Grips</span>
             <h3 className="text-xl font-semibold text-zinc-950 dark:text-white tracking-tight">Commercial Cane Attachments</h3>
@@ -70,12 +70,12 @@ export const CostBreakdown: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-[#06080D] border border-dashed border-[#FF5500]/40 dark:border-[#FF7733]/40 rounded-2xl p-6 space-y-3 relative shadow-md dark:shadow-xl transition-colors">
-            <ReticleCorner size={8} className="text-[#FF5500] dark:text-[#FF7733]" />
-            <span className="text-[10px] font-mono uppercase text-[#FF5500] dark:text-[#FF7733] tracking-wider font-semibold">Edge AI Wearable</span>
+          <div className="bg-white dark:bg-[#3D1E1A]/40 dark:backdrop-blur-xl border border-[#FF5500]/40 dark:border-[#FF9E8C]/50 rounded-2xl p-6 space-y-3 relative shadow-md dark:shadow-[0_4px_24px_rgba(255,158,140,0.15)] transition-colors">
+            <ReticleCorner size={8} className="text-[#FF5500] dark:text-[#FF9E8C]" />
+            <span className="text-[10px] font-mono uppercase text-[#FF5500] dark:text-[#FF9E8C] tracking-wider font-semibold">Edge AI Wearable</span>
             <h3 className="text-xl font-semibold text-zinc-950 dark:text-white tracking-tight">BeepVision Wearable</h3>
-            <div className="text-2xl font-mono font-bold text-[#FF5500] dark:text-[#FF7733]">{TOTAL_ESTIMATE_RANGE}</div>
-            <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed font-normal">
+            <div className="text-2xl font-mono font-bold text-[#FF5500] dark:text-[#FF9E8C]">{TOTAL_ESTIMATE_RANGE}</div>
+            <p className="text-xs text-zinc-600 dark:text-[#C8BDB6] leading-relaxed font-normal">
               26 TOPS on-device NPU, solid-state LiDAR, 4-corner sonar, IMU, GPS, and bone-conduction voice. Designed to supplement cane technique at fraction of cost.
             </p>
           </div>
@@ -83,19 +83,19 @@ export const CostBreakdown: React.FC = () => {
         </div>
 
         {/* Detailed BOM Table */}
-        <div className="bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 text-left space-y-4 relative shadow-lg dark:shadow-2xl transition-colors">
-          <ReticleCorner size={10} className="text-[#059669] dark:text-[#00F5A0]" />
+        <div className="bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 text-left space-y-4 relative shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
+          <ReticleCorner size={10} className="text-[#059669] dark:text-[#30D158]" />
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-black/10 dark:border-white/10 pb-4">
             <div>
-              <span className="text-[10px] font-mono text-[#059669] dark:text-[#00F5A0] uppercase tracking-[0.14em]">
+              <span className="text-[10px] font-mono text-[#059669] dark:text-[#30D158] uppercase tracking-[0.14em] font-semibold">
                 DETAILED COMPONENT BILL OF MATERIALS
               </span>
               <h3 className="text-xl font-semibold text-zinc-950 dark:text-white tracking-tight mt-0.5">
                 Single-Unit Prototype Hardware Pricing (INR)
               </h3>
             </div>
-            <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-black/5 dark:bg-white/5 px-3 py-1 rounded-full border border-black/10 dark:border-white/10 uppercase tracking-wider">
+            <span className="text-xs font-mono text-zinc-600 dark:text-[#30D158] bg-black/5 dark:bg-[#30D158]/10 px-3 py-1 rounded-full border border-black/10 dark:border-[#30D158]/20 uppercase tracking-wider font-semibold">
               Source: PDF Page 1–2
             </span>
           </div>

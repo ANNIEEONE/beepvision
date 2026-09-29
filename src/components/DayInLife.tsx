@@ -160,19 +160,19 @@ export const DayInLife: React.FC = () => {
   };
 
   return (
-    <section id="day-in-life" className="scroll-mt-28 py-28 bg-[#F8F9FA] dark:bg-[#030406] border-t border-dashed border-black/10 dark:border-white/10 relative overflow-hidden transition-colors duration-300">
+    <section id="day-in-life" className="scroll-mt-28 py-28 bg-[#F8F9FA] dark:bg-[#1A1614] border-t border-black/10 dark:border-white/10 relative overflow-hidden transition-colors duration-300">
       {/* Background blueprint grid */}
       <div className="absolute inset-0 antimetal-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-16 space-y-4">
-          <TechnicalBadge number="09" label="24-HOUR OPERATIONAL PROFILE" color="orange" />
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-950 dark:text-white tracking-[-0.04em] leading-[1.08]">
-            A DAY WITH BEEPVISION.<br />
-            <span className="text-[#FF5500] dark:text-[#FF7733]">CONTINUOUS SECOND SIGHT.</span>
+          <TechnicalBadge number="09" label="24-Hour Operational Profile" color="orange" />
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em] leading-[1.05]">
+            A day with BeepVision.<br />
+            <span className="text-[#FF5500] dark:text-[#FF9E8C]">Continuous second sight.</span>
           </h2>
-          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-[#C8BDB6] font-normal leading-relaxed">
             Assistive robotics shouldn't feel like a medical contraption. It must behave like an air-gapped,
             transparent copilot that protects situational awareness from sunrise navigation to night rain.
           </p>
@@ -189,17 +189,17 @@ export const DayInLife: React.FC = () => {
                 onClick={() => setSelectedMilestone(idx)}
                 className={`relative p-4 rounded-xl border text-left transition-all flex flex-col justify-between h-36 ${
                   isSelected
-                    ? 'bg-white dark:bg-[#0A0D14] border-[#FF5500] dark:border-[#FF7733] shadow-md dark:shadow-lg dark:shadow-[#FF7733]/10 ring-1 ring-[#FF5500]/40 dark:ring-[#FF7733]/40'
-                    : 'bg-white/70 dark:bg-[#06080D] border-dashed border-black/10 dark:border-white/10 hover:border-black/25 dark:hover:border-white/25 hover:bg-white dark:hover:bg-[#080B12]'
+                    ? 'bg-white dark:bg-[#3D1E1A]/40 dark:backdrop-blur-md border-[#FF5500] dark:border-[#FF9E8C]/60 shadow-md dark:shadow-[0_4px_20px_rgba(255,158,140,0.15)] ring-1 ring-[#FF5500]/40 dark:ring-[#FF9E8C]/40'
+                    : 'bg-white/70 dark:bg-[#251E1C]/40 dark:backdrop-blur-md border-black/10 dark:border-white/10 hover:border-black/25 dark:hover:border-white/25 hover:bg-white dark:hover:bg-[#251E1C]/70'
                 }`}
                 aria-pressed={isSelected}
               >
                 {isSelected && <ReticleCorner size={8} />}
                 <div className="flex items-center justify-between w-full">
-                  <span className={`text-[10px] font-mono tracking-wider ${isSelected ? 'text-[#FF5500] dark:text-[#FF7733] font-bold' : 'text-zinc-500'}`}>
+                  <span className={`text-[10px] font-mono tracking-wider ${isSelected ? 'text-[#FF5500] dark:text-[#FF9E8C] font-bold' : 'text-zinc-500'}`}>
                     {m.time}
                   </span>
-                  <Icon className={`w-4 h-4 ${isSelected ? 'text-[#FF5500] dark:text-[#FF7733]' : 'text-zinc-400 dark:text-zinc-500'}`} />
+                  <Icon className={`w-4 h-4 ${isSelected ? 'text-[#FF5500] dark:text-[#FF9E8C]' : 'text-zinc-400 dark:text-zinc-500'}`} />
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] font-mono text-zinc-500 block uppercase tracking-wider">{m.phase}</span>
@@ -208,8 +208,8 @@ export const DayInLife: React.FC = () => {
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-[9px] font-mono">
-                  <span className={isSelected ? 'text-[#059669] dark:text-[#00F5A0]' : 'text-zinc-500 dark:text-zinc-600'}>{m.code}</span>
-                  {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] dark:bg-[#FF7733] animate-ping" />}
+                  <span className={isSelected ? 'text-[#059669] dark:text-[#30D158]' : 'text-zinc-500 dark:text-zinc-600'}>{m.code}</span>
+                  {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] dark:bg-[#FF9E8C] animate-ping" />}
                 </div>
               </button>
             );
@@ -217,25 +217,25 @@ export const DayInLife: React.FC = () => {
         </div>
 
         {/* Cinematic Narrative Stage Display */}
-        <div className="relative bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-10 text-left grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch shadow-lg dark:shadow-2xl transition-colors">
+        <div className="relative bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-10 text-left grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
           <ReticleCorner size={14} />
 
           {/* Left Narrative Column */}
           <div className="lg:col-span-8 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="text-xs font-mono text-[#FF5500] dark:text-[#FF7733] bg-[#FF5500]/10 dark:bg-[#FF7733]/10 border border-[#FF5500]/25 dark:border-[#FF7733]/25 px-3 py-1 rounded">
+                <span className="text-xs font-mono text-[#FF5500] dark:text-[#FF9E8C] bg-[#FF5500]/10 dark:bg-[#FF9E8C]/15 border border-[#FF5500]/25 dark:border-[#FF9E8C]/30 px-3 py-1 rounded font-semibold">
                   TIMELINE // {current.time} ({current.code})
                 </span>
                 <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 px-2.5 py-1 rounded">
                   LOC: {current.location}
                 </span>
-                <span className="text-xs font-mono text-[#0284C7] dark:text-[#00D2FF] bg-[#0284C7]/10 dark:bg-[#00D2FF]/10 border border-[#0284C7]/20 dark:border-[#00D2FF]/20 px-2.5 py-1 rounded">
+                <span className="text-xs font-mono text-[#0284C7] dark:text-[#30D158] bg-[#0284C7]/10 dark:bg-[#30D158]/10 border border-[#0284C7]/20 dark:border-[#30D158]/20 px-2.5 py-1 rounded font-semibold">
                   {current.phase}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-zinc-950 dark:text-white tracking-[-0.03em]">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em]">
                 {current.title}
               </h3>
 
@@ -245,24 +245,24 @@ export const DayInLife: React.FC = () => {
             </div>
 
             {/* Sensory Experience Box with Audio Trigger */}
-            <div className="bg-[#F4F5F7] dark:bg-[#0A0D14] border border-dashed border-black/10 dark:border-white/10 rounded-xl p-5 space-y-3">
+            <div className="bg-[#F4F5F7] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 rounded-xl p-5 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-widest flex items-center gap-2">
-                  <Sparkles className="w-3.5 h-3.5 text-[#FF5500] dark:text-[#FF7733]" />
+                <span className="text-[10px] font-mono text-zinc-600 dark:text-[#C8BDB6] uppercase tracking-widest flex items-center gap-2">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FF5500] dark:text-[#FF9E8C]" />
                   User Sensory Experience (Audio & Haptic Signal)
                 </span>
                 <button
                   onClick={() => playTone(current.freq)}
                   disabled={playingTone}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FF5500]/10 dark:bg-[#FF7733]/10 hover:bg-[#FF5500]/20 dark:hover:bg-[#FF7733]/20 border border-[#FF5500]/30 dark:border-[#FF7733]/30 text-[10px] font-mono text-[#FF5500] dark:text-[#FF7733] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FF5500]/10 dark:bg-[#FF9E8C]/15 hover:bg-[#FF5500]/20 dark:hover:bg-[#FF9E8C]/25 border border-[#FF5500]/30 dark:border-[#FF9E8C]/30 text-[10px] font-mono text-[#FF5500] dark:text-[#FF9E8C] transition-colors cursor-pointer font-semibold"
                 >
                   <Volume2 className="w-3 h-3" />
                   <span>{playingTone ? 'Transmitting...' : 'Play Audio Cue'}</span>
                 </button>
               </div>
 
-              <div className="p-3 bg-white dark:bg-[#030406] border border-black/10 dark:border-white/10 rounded-lg">
-                <span className="text-sm font-mono text-zinc-950 dark:text-[#FFB088] font-semibold leading-relaxed block">
+              <div className="p-3.5 bg-white dark:bg-[#1A1614]/90 border border-black/10 dark:border-white/8 rounded-lg">
+                <span className="text-sm font-mono text-zinc-950 dark:text-[#FF9E8C] font-semibold leading-relaxed block">
                   {current.cue}
                 </span>
               </div>
@@ -270,48 +270,48 @@ export const DayInLife: React.FC = () => {
           </div>
 
           {/* Right Hardware Telemetry Column */}
-          <div className="lg:col-span-4 bg-[#F4F5F7] dark:bg-[#0A0D14] border border-black/10 dark:border-white/10 rounded-xl p-6 flex flex-col justify-between space-y-4 font-mono text-xs">
+          <div className="lg:col-span-4 bg-[#F4F5F7] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 rounded-xl p-6 flex flex-col justify-between space-y-4 font-mono text-xs">
             <div className="space-y-4">
-              <div className="flex items-center justify-between border-b border-dashed border-black/10 dark:border-white/10 pb-3">
+              <div className="flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-3">
                 <span className="text-zinc-600 dark:text-zinc-400 uppercase text-[10px] tracking-widest">Live Wearable State</span>
-                <span className="flex items-center gap-1.5 text-[#059669] dark:text-[#00F5A0] text-[10px]">
-                  <span className="w-2 h-2 rounded-full bg-[#059669] dark:bg-[#00F5A0] animate-pulse" />
+                <span className="flex items-center gap-1.5 text-[#059669] dark:text-[#30D158] text-[10px] font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-[#059669] dark:bg-[#30D158] animate-pulse" />
                   TELEMETRY
                 </span>
               </div>
 
               <div className="space-y-1.5">
-                <div className="text-[11px] text-zinc-500">Active Sensor Pipeline:</div>
-                <div className="text-[#059669] dark:text-[#00F5A0] font-semibold text-xs leading-relaxed bg-white dark:bg-[#030406] p-2.5 rounded border border-black/5 dark:border-white/5">
+                <div className="text-[11px] text-zinc-500 dark:text-zinc-400">Active Sensor Pipeline:</div>
+                <div className="text-[#059669] dark:text-[#30D158] font-semibold text-xs leading-relaxed bg-white dark:bg-[#1A1614]/90 p-2.5 rounded border border-black/5 dark:border-white/8">
                   {current.sensorsActive}
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <div className="text-[11px] text-zinc-500">Haptic Actuator Array:</div>
-                <div className="text-[#0284C7] dark:text-[#00D2FF] font-semibold text-xs bg-white dark:bg-[#030406] p-2.5 rounded border border-black/5 dark:border-white/5">
+                <div className="text-[11px] text-zinc-500 dark:text-zinc-400">Haptic Actuator Array:</div>
+                <div className="text-[#0284C7] dark:text-[#FF9E8C] font-semibold text-xs bg-white dark:bg-[#1A1614]/90 p-2.5 rounded border border-black/5 dark:border-white/8">
                   {current.hapticStatus}
                 </div>
               </div>
             </div>
 
             {/* Quick Metrics Grid */}
-            <div className="pt-3 border-t border-dashed border-black/10 dark:border-white/10 grid grid-cols-2 gap-3 text-[11px]">
-              <div className="bg-white dark:bg-[#030406] p-2 rounded border border-black/5 dark:border-white/5">
-                <div className="text-zinc-500 text-[10px]">Hailo NPU Load</div>
+            <div className="pt-3 border-t border-black/10 dark:border-white/10 grid grid-cols-2 gap-3 text-[11px]">
+              <div className="bg-white dark:bg-[#1A1614]/90 p-2.5 rounded-lg border border-black/5 dark:border-white/8">
+                <div className="text-zinc-500 dark:text-zinc-400 text-[10px]">Hailo NPU Load</div>
                 <div className="text-zinc-950 dark:text-white font-bold">{current.telemetry.npuLoad}</div>
               </div>
-              <div className="bg-white dark:bg-[#030406] p-2 rounded border border-black/5 dark:border-white/5">
-                <div className="text-zinc-500 text-[10px]">Power Draw</div>
+              <div className="bg-white dark:bg-[#1A1614]/90 p-2.5 rounded-lg border border-black/5 dark:border-white/8">
+                <div className="text-zinc-500 dark:text-zinc-400 text-[10px]">Power Draw</div>
                 <div className="text-zinc-950 dark:text-white font-bold">{current.telemetry.powerDraw}</div>
               </div>
-              <div className="bg-white dark:bg-[#030406] p-2 rounded border border-black/5 dark:border-white/5">
-                <div className="text-zinc-500 text-[10px]">Core Temp</div>
+              <div className="bg-white dark:bg-[#1A1614]/90 p-2.5 rounded-lg border border-black/5 dark:border-white/8">
+                <div className="text-zinc-500 dark:text-zinc-400 text-[10px]">Core Temp</div>
                 <div className="text-zinc-950 dark:text-white font-bold">{current.telemetry.temp}</div>
               </div>
-              <div className="bg-white dark:bg-[#030406] p-2 rounded border border-black/5 dark:border-white/5">
-                <div className="text-zinc-500 text-[10px]">Ear Canal State</div>
-                <div className="text-[#059669] dark:text-[#00F5A0] font-bold">{current.telemetry.earCanal}</div>
+              <div className="bg-white dark:bg-[#1A1614]/90 p-2.5 rounded-lg border border-black/5 dark:border-white/8">
+                <div className="text-zinc-500 dark:text-zinc-400 text-[10px]">Ear Canal State</div>
+                <div className="text-[#059669] dark:text-[#30D158] font-bold">{current.telemetry.earCanal}</div>
               </div>
             </div>
           </div>

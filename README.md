@@ -94,13 +94,21 @@ flowchart LR
 
 ---
 
-### 📡 Interactive Sensor Fusion & Spatial Radar
+### 🔀 Dynamic Word Swap & Ambient Audio Experience
 
-Live interactive spatial radar visualizing LiDAR rays, ultrasonic arcs, and camera classification cones:
-
-| Sensor Fusion Radar | Real-Time Problem Taxonomy |
+| 3D Flipping Word Swap (`confidence` ↔ `beepvision`) | Top Bar Ambient Music with Animated Equalizer |
 | :---: | :---: |
-| ![Sensors Radar](screenshots/03_sensors.png) | ![The Problem](screenshots/02_problem.png) |
+| ![Flipping Word Swap](screenshots/19_flipping_word.png) | ![Music Player Active](screenshots/18_music_playing.png) |
+
+---
+
+### 🔁 Live Scroll Loop Indicator & Morphing Back-to-Top
+
+Real-time border SVG progress tracking with traveling locator dot that smoothly shrinks and morphs into a smooth-scroll-to-top arrow button upon reaching the bottom:
+
+| Real-Time Live Scroll Loop | Interactive Spatial Radar |
+| :---: | :---: |
+| ![Scroll Loop Active](screenshots/17_scroll_loop_active.png) | ![Sensors Radar](screenshots/03_sensors.png) |
 
 ---
 
@@ -134,9 +142,12 @@ Transparent, component-level prototype BOM analysis and transition roadmap from 
 
 ## 💻 Interactive Website Features
 
-The website accompanying BeepVision is built as a product experience:
+The website accompanying BeepVision is built as a high-end product experience:
 
 - **💎 Dual Theme Engine**: Seamless toggle between deep obsidian dark mode and Antimetal-style technical light mode with persistent storage.
+- **🔀 3D Flipping Word Swap**: Animated headline using perspective 3D rotation, seamlessly cycling between *"Move with confidence"* and *"Move with beepvision"* every 5 seconds.
+- **🔁 Live Scroll Loop Navigation**: An interactive top-left indicator featuring a real-time SVG border path that updates with scroll depth, a traveling tracking dot, and smooth morphing into a scroll-to-top trigger at the page bottom.
+- **🎵 Ambient Background Music**: Top navbar audio toggle featuring an emerald 3-bar animated equalizer wave, smooth volume calibration, and instant play/pause synchronization.
 - **🌀 Momentum Scrolling**: Integrated [Lenis](https://lenis.darkroom.engineering/) smooth scroll engine for 60fps momentum feel.
 - **🧊 Interactive Three.js 3D Device**: Real-time rendering of the BeepVision chest-harness unit with dynamic rotation, exploded-view breakdown, and technical wireframe modes.
 - **♿ AAA Accessibility Mode**: Dedicated one-click high-contrast toggle boosting WCAG contrast and text readability.

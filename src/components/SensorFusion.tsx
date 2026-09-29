@@ -95,17 +95,17 @@ export const SensorFusion: React.FC = () => {
   const current = sensors.find((s) => s.id === activeSensor) || sensors[0];
 
   return (
-    <section id="sensors" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#030406] border-t border-dashed border-black/10 dark:border-white/10 relative overflow-hidden antimetal-crosshair transition-colors">
+    <section id="sensors" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#1A1614] border-t border-black/10 dark:border-white/10 relative overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-16 space-y-4">
-          <TechnicalBadge number="03" label="MULTI-MODAL SENSORY LAYER" color="cyan" />
+          <TechnicalBadge number="03" label="Multi-Modal Sensory Layer" color="cyan" />
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em] leading-[1.05]">
-            ONE SENSOR GUESSES.<br />
-            <span className="text-[#0088CC] dark:text-[#00D2FF]">FUSION VERIFIES.</span>
+            One sensor guesses.<br />
+            <span className="text-[#0088CC] dark:text-[#30D158]">Fusion verifies.</span>
           </h2>
-          <p className="text-base sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-700 dark:text-[#C8BDB6] leading-relaxed font-normal">
             No single sensor modality is safe in an unpredictable city. A camera is blinded by darkness or fog.
             A LiDAR laser beam passes through clean glass doors. An ultrasonic sonar is deafened by wind turbulence.
             BeepVision fuses 6 independent modalities into unified truth.
@@ -130,8 +130,8 @@ export const SensorFusion: React.FC = () => {
                   onClick={() => setActiveSensor(sensor.id)}
                   className={`w-full text-left p-3.5 rounded-xl transition-all border flex items-center justify-between group relative ${
                     isSelected
-                      ? 'bg-white dark:bg-white/[0.06] border-black/20 dark:border-white/25 shadow-md dark:shadow-xl text-zinc-950 dark:text-white'
-                      : 'bg-white dark:bg-[#06080D] border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-zinc-200'
+                      ? 'bg-white dark:bg-[#3D1E1A]/40 dark:backdrop-blur-md border-black/20 dark:border-[#FF9E8C]/40 shadow-md dark:shadow-[0_4px_20px_rgba(255,158,140,0.15)] text-zinc-950 dark:text-white'
+                      : 'bg-white dark:bg-[#251E1C]/40 dark:backdrop-blur-md border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-zinc-200'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -161,40 +161,40 @@ export const SensorFusion: React.FC = () => {
           </div>
 
           {/* Right Column: Sensor Detail HUD Card */}
-          <div className="lg:col-span-7 bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 relative text-left shadow-xl dark:shadow-2xl space-y-6">
-            <ReticleCorner size={10} className="text-[#0088CC] dark:text-[#00D2FF]" />
+          <div className="lg:col-span-7 bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 relative text-left shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] space-y-6">
+            <ReticleCorner size={10} className="text-[#0088CC] dark:text-[#30D158]" />
 
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-black/10 dark:border-white/10 pb-4">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#0088CC] dark:text-[#00D2FF] font-semibold">
+                <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#0088CC] dark:text-[#30D158] font-semibold">
                   {current.type}
                 </span>
                 <h3 className="text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight mt-0.5">{current.name}</h3>
               </div>
-              <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-zinc-700 dark:text-zinc-300">
+              <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-black/5 dark:bg-[#30D158]/10 border border-black/10 dark:border-[#30D158]/20 text-zinc-700 dark:text-[#30D158]">
                 {current.bus}
               </span>
             </div>
 
             {/* What it sees vs How it fails */}
             <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-1">
-                <span className="text-[11px] font-mono text-[#00B368] dark:text-[#00F5A0] uppercase tracking-wider block font-semibold">
+              <div className="p-4 rounded-xl bg-black/[0.03] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 space-y-1">
+                <span className="text-[11px] font-mono text-[#00B368] dark:text-[#30D158] uppercase tracking-wider block font-semibold">
                   Primary Perception Capability
                 </span>
                 <p className="text-sm text-zinc-700 dark:text-zinc-200 leading-relaxed font-normal">{current.whatItSees}</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-red-500/10 dark:bg-red-950/20 border border-red-500/20 space-y-1">
-                  <span className="text-[11px] font-mono text-red-600 dark:text-red-400 uppercase tracking-wider block font-semibold flex items-center gap-1.5">
+                <div className="p-4 rounded-xl bg-red-500/10 dark:bg-[#3D1E1A]/40 border border-red-500/20 dark:border-[#FF9E8C]/30 space-y-1">
+                  <span className="text-[11px] font-mono text-red-600 dark:text-[#FF9E8C] uppercase tracking-wider block font-semibold flex items-center gap-1.5">
                     <X className="w-3.5 h-3.5" /> Environmental Failure Mode
                   </span>
-                  <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed font-normal">{current.failureMode}</p>
+                  <p className="text-xs text-zinc-700 dark:text-[#C8BDB6] leading-relaxed font-normal">{current.failureMode}</p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#0088CC]/10 dark:bg-[#00D2FF]/10 border border-[#0088CC]/25 dark:border-[#00D2FF]/25 space-y-1">
-                  <span className="text-[11px] font-mono text-[#0088CC] dark:text-[#00D2FF] uppercase tracking-wider block font-semibold flex items-center gap-1.5">
+                <div className="p-4 rounded-xl bg-[#0088CC]/10 dark:bg-[#30D158]/10 border border-[#0088CC]/25 dark:border-[#30D158]/25 space-y-1">
+                  <span className="text-[11px] font-mono text-[#0088CC] dark:text-[#30D158] uppercase tracking-wider block font-semibold flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5" /> Multi-Sensor Mitigation
                   </span>
                   <p className="text-xs text-zinc-700 dark:text-zinc-200 leading-relaxed font-normal">{current.fusionRole}</p>
@@ -203,15 +203,15 @@ export const SensorFusion: React.FC = () => {
             </div>
 
             {/* Real-Time Telemetry Spec */}
-            <div className="p-3.5 rounded-xl bg-[#F4F5F7] dark:bg-[#030406] border border-black/10 dark:border-white/10 flex items-center justify-between text-xs font-mono">
-              <span className="text-zinc-500 uppercase tracking-widest">Hardware Channel:</span>
-              <span className="text-[#00B368] dark:text-[#00F5A0] font-semibold">{current.telemetry}</span>
+            <div className="p-3.5 rounded-xl bg-[#F4F5F7] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 flex items-center justify-between text-xs font-mono">
+              <span className="text-zinc-500 dark:text-zinc-400 uppercase tracking-widest">Hardware Channel:</span>
+              <span className="text-[#00B368] dark:text-[#30D158] font-semibold">{current.telemetry}</span>
             </div>
           </div>
         </div>
 
         {/* Anime.js Kinetic Radar Visualizer Strip */}
-        <div className="bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 text-left relative overflow-hidden shadow-xl dark:shadow-2xl">
+        <div className="bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 text-left relative overflow-hidden shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)]">
           <ReticleCorner size={10} className="text-[#FF5500] dark:text-[#FF7733]" />
           
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">

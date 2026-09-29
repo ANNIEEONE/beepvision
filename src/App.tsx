@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { MusicProvider } from './context/MusicContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Problem } from './components/Problem';
@@ -22,8 +23,12 @@ function MainApp() {
   const [highContrast, setHighContrast] = useState<boolean>(false);
   const { theme } = useTheme();
 
-  // Initialize Lenis 60fps momentum smooth scroll (Antimetal standard)
+  // Initialize Lenis smooth scroll respecting accessibility prefers-reduced-motion
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -33,6 +38,8 @@ function MainApp() {
       wheelMultiplier: 1.0,
       touchMultiplier: 1.5,
     });
+
+    (window as any).__lenis = lenis;
 
     let animationFrameId: number;
     function raf(time: number) {
@@ -44,20 +51,21 @@ function MainApp() {
     return () => {
       cancelAnimationFrame(animationFrameId);
       lenis.destroy();
+      delete (window as any).__lenis;
     };
   }, []);
 
   return (
     <div
-      className={`min-h-screen bg-[#F8F9FA] dark:bg-[#06070B] text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors duration-300 relative ${
+      className={`min-h-screen bg-[#F8F9FA] dark:bg-[#1A1614] text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors duration-300 relative ${
         highContrast ? 'contrast-125 saturate-150' : ''
       }`}
     >
-      {/* Dark Mode Modern Ambient Mesh Gradient Overlay (Rich & Experience-Full) */}
+      {/* Dark Mode Warm Peach Pink & Apple Green Ambient Glow Overlay */}
       <div className="fixed inset-0 pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-500 overflow-hidden z-0">
-        <div className="absolute top-[-10%] left-[20%] w-[600px] h-[500px] bg-[#FF7733]/[0.08] rounded-full blur-[140px]" />
-        <div className="absolute top-[35%] right-[10%] w-[550px] h-[500px] bg-[#6366F1]/[0.06] rounded-full blur-[160px]" />
-        <div className="absolute bottom-[20%] left-[10%] w-[500px] h-[450px] bg-[#00F5A0]/[0.05] rounded-full blur-[150px]" />
+        <div className="absolute top-[-10%] left-[20%] w-[600px] h-[500px] bg-[#FF9E8C]/[0.08] rounded-full blur-[140px]" />
+        <div className="absolute top-[35%] right-[10%] w-[550px] h-[500px] bg-[#30D158]/[0.05] rounded-full blur-[160px]" />
+        <div className="absolute bottom-[20%] left-[10%] w-[500px] h-[450px] bg-[#FFA07A]/[0.06] rounded-full blur-[150px]" />
       </div>
 
       {/* Navigation */}
@@ -120,7 +128,9 @@ function MainApp() {
 export function App() {
   return (
     <ThemeProvider>
-      <MainApp />
+      <MusicProvider>
+        <MainApp />
+      </MusicProvider>
     </ThemeProvider>
   );
 }

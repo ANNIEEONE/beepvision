@@ -452,9 +452,9 @@ export const Device3D: React.FC = () => {
   }, [exploded]);
 
   return (
-    <div className="relative w-full h-[620px] rounded-2xl bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 overflow-hidden select-none shadow-xl dark:shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-colors">
+    <div className="relative w-full h-[620px] rounded-2xl bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 overflow-hidden select-none shadow-xl dark:shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-colors">
       {/* Antimetal Signature Reticle Corners */}
-      <ReticleCorner size={10} className="text-[#FF5500]/50 dark:text-[#FF7733]/50" />
+      <ReticleCorner size={10} className="text-[#FF5500]/50 dark:text-[#FF9E8C]/50" />
 
       {/* 3D Canvas Mount */}
       <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
@@ -465,7 +465,7 @@ export const Device3D: React.FC = () => {
           onClick={() => setExploded(!exploded)}
           className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wider uppercase transition-all border ${
             exploded
-              ? 'bg-[#FF5500] dark:bg-[#FF7733] text-white dark:text-black border-[#FF5500] dark:border-[#FF9900] font-bold shadow-md'
+              ? 'bg-[#FF5500] dark:bg-[#FF9E8C] text-white dark:text-[#1A1614] border-[#FF5500] dark:border-[#FF9E8C] font-bold shadow-md'
               : 'glass-surface border-black/10 dark:border-white/10 text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white hover:border-black/25 dark:hover:border-white/25'
           }`}
           aria-label="Toggle Exploded Layer View"
@@ -478,7 +478,7 @@ export const Device3D: React.FC = () => {
           onClick={() => setSensorsActive(!sensorsActive)}
           className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wider uppercase transition-all border ${
             sensorsActive
-              ? 'glass-surface border-[#0088CC]/40 dark:border-[#00D2FF]/40 text-[#0088CC] dark:text-[#00D2FF] font-semibold'
+              ? 'glass-surface border-[#0088CC]/40 dark:border-[#30D158]/40 text-[#0088CC] dark:text-[#30D158] font-semibold'
               : 'glass-surface border-black/10 dark:border-white/10 text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white'
           }`}
           aria-label="Toggle Active Sensor Rays"
@@ -505,7 +505,7 @@ export const Device3D: React.FC = () => {
       <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-3 glass-surface p-2.5 rounded-xl border border-black/10 dark:border-white/10 z-10">
         <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none">
           <span className="text-[10px] font-mono uppercase text-zinc-500 dark:text-zinc-400 mr-2 flex items-center gap-1 tracking-widest">
-            <Zap className="w-3 h-3 text-[#FF5500] dark:text-[#FF7733]" /> Telemetry:
+            <Zap className="w-3 h-3 text-[#FF5500] dark:text-[#FF9E8C]" /> Telemetry:
           </span>
           {HOTSPOTS.map((spot) => (
             <button
@@ -529,10 +529,10 @@ export const Device3D: React.FC = () => {
 
       {/* Active Hotspot HUD Detail Card */}
       {activeHotspot && (
-        <div className="absolute top-16 right-4 w-84 glass-surface border border-[#FF5500]/40 dark:border-[#FF7733]/40 rounded-xl p-5 shadow-2xl text-left z-20 transition-all relative">
-          <ReticleCorner size={8} className="text-[#FF5500] dark:text-[#FF7733]" />
+        <div className="absolute top-16 right-4 w-84 glass-surface border border-[#FF5500]/40 dark:border-[#FF9E8C]/40 rounded-xl p-5 shadow-2xl text-left z-20 transition-all relative">
+          <ReticleCorner size={8} className="text-[#FF5500] dark:text-[#FF9E8C]" />
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[10px] font-mono uppercase text-[#FF5500] dark:text-[#FF7733] tracking-[0.14em] font-semibold">
+            <span className="text-[10px] font-mono uppercase text-[#FF5500] dark:text-[#FF9E8C] tracking-[0.14em] font-semibold">
               {activeHotspot.category}
             </span>
             <button
@@ -553,7 +553,7 @@ export const Device3D: React.FC = () => {
             </div>
             <div className="flex justify-between text-zinc-500 dark:text-zinc-400">
               <span>Performance:</span>
-              <span className="text-[#00B368] dark:text-[#00F5A0] font-semibold">{activeHotspot.spec}</span>
+              <span className="text-[#00B368] dark:text-[#30D158] font-semibold">{activeHotspot.spec}</span>
             </div>
           </div>
         </div>

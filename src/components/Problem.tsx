@@ -49,15 +49,15 @@ export const Problem: React.FC = () => {
   ];
 
   return (
-    <section id="problem" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#030406] border-t border-dashed border-black/10 dark:border-white/10 relative transition-colors">
+    <section id="problem" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#1A1614] border-t border-black/10 dark:border-white/10 relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-16 space-y-4">
-          <TechnicalBadge number="02" label="URBAN MOBILITY VULNERABILITIES" color="orange" />
+          <TechnicalBadge label="Urban Mobility Vulnerabilities" color="orange" />
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em] leading-[1.05]">
-            THE WORLD DOESN’T STOP<br />
-            <span className="text-zinc-500">BECAUSE YOU CAN’T SEE IT.</span>
+            The world doesn’t stop<br />
+            <span className="text-zinc-500 dark:text-zinc-400">because you can’t see it.</span>
           </h2>
           <p className="text-base sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed font-normal">
             Independence isn’t about being sheltered—it’s about having the perceptual awareness to move boldly.
@@ -71,10 +71,10 @@ export const Problem: React.FC = () => {
           {/* Left: Scenario Selector Pills */}
           <div className="lg:col-span-5 space-y-3">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] font-mono uppercase tracking-[0.14em] text-zinc-500">
+              <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wide">
                 Critical Failure Scenarios
               </span>
-              <span className="text-[11px] font-mono text-[#FF5500] dark:text-[#FF7733] font-bold">0{selectedScenario + 1} / 04</span>
+              <span className="text-xs font-semibold text-[#FF5500] dark:text-[#FF7733]">Scenario {selectedScenario + 1} of 4</span>
             </div>
 
             {scenarios.map((sc, i) => {
@@ -84,71 +84,71 @@ export const Problem: React.FC = () => {
                 <button
                   key={sc.title}
                   onClick={() => setSelectedScenario(i)}
-                  className={`w-full text-left p-4 rounded-xl transition-all border flex items-center justify-between group relative ${
+                  className={`w-full min-h-[48px] text-left p-4 rounded-xl transition-all border flex items-center justify-between group relative cursor-pointer ${
                     isSelected
-                      ? 'bg-white dark:bg-white/[0.06] border-[#FF5500] dark:border-[#FF7733]/60 shadow-lg dark:shadow-[0_0_20px_rgba(255,119,51,0.15)] text-zinc-950 dark:text-white'
-                      : 'bg-white dark:bg-[#080A0F] border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-zinc-200 shadow-sm dark:shadow-none'
+                      ? 'bg-white dark:bg-[#3D1E1A]/40 dark:backdrop-blur-md border-[#FF5500] dark:border-[#FF9E8C]/60 shadow-lg dark:shadow-[0_4px_20px_rgba(255,158,140,0.15)] text-zinc-950 dark:text-white'
+                      : 'bg-white dark:bg-[#251E1C]/40 dark:backdrop-blur-md border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-zinc-100 shadow-xs'
                   }`}
                   aria-selected={isSelected}
                 >
                   <div className="flex items-center gap-3.5">
                     <div
                       className={`w-9 h-9 rounded-lg flex items-center justify-center transition-colors ${
-                        isSelected ? 'bg-[#FF5500] dark:bg-[#FF7733] text-white dark:text-black font-bold' : 'bg-black/5 dark:bg-white/5 text-zinc-500 dark:text-zinc-400 group-hover:text-black dark:group-hover:text-white'
+                        isSelected ? 'bg-[#FF5500] dark:bg-[#FF9E8C] text-white dark:text-[#1A1614] font-bold' : 'bg-black/5 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 group-hover:text-black dark:group-hover:text-white'
                       }`}
                     >
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF5500] dark:text-[#FF7733] font-bold block">
+                      <span className="text-xs uppercase tracking-wide text-[#FF5500] dark:text-[#FF9E8C] font-semibold block">
                         {sc.category}
                       </span>
-                      <h4 className="text-sm font-medium transition-colors">
+                      <h4 className="text-sm font-semibold transition-colors mt-0.5">
                         {sc.title}
                       </h4>
                     </div>
                   </div>
-                  <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#FF5500] dark:text-[#FF7733] translate-x-1' : 'opacity-0'}`} />
+                  <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#FF5500] dark:text-[#FF9E8C] translate-x-1' : 'opacity-0'}`} />
                 </button>
               );
             })}
           </div>
 
           {/* Right: Comparative Breakdown Display Card */}
-          <div className="lg:col-span-7 bg-white dark:bg-[#080A0F] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 relative text-left shadow-xl dark:shadow-2xl">
-            <ReticleCorner size={10} className="text-[#FF5500] dark:text-[#FF7733]" />
+          <div className="lg:col-span-7 bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 relative text-left shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)]">
+            <ReticleCorner size={10} className="text-[#FF5500] dark:text-[#FF9E8C]" />
             
             <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#FF5500]/10 dark:bg-[#FF7733]/15 text-[#FF5500] dark:text-[#FF7733] border border-[#FF5500]/25 dark:border-[#FF7733]/30 font-bold">
-                SCENARIO 0{selectedScenario + 1} DEEP DIVE
+              <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full bg-[#FF5500]/10 dark:bg-[#FF9E8C]/15 text-[#FF5500] dark:text-[#FF9E8C] border border-[#FF5500]/25 dark:border-[#FF9E8C]/30 font-semibold">
+                Scenario {selectedScenario + 1} Analysis
               </span>
-              <span className="text-xs font-mono text-zinc-500">Autonomous Wearable Layer</span>
+              <span className="text-xs text-zinc-600 dark:text-zinc-400 font-medium">Autonomous Perception Layer</span>
             </div>
 
             <h3 className="text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight mb-3">
               {scenarios[selectedScenario].title}
             </h3>
 
-            <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed mb-6 font-normal">
+            <p className="text-sm text-zinc-700 dark:text-[#C8BDB6] leading-relaxed mb-6 font-normal">
               {scenarios[selectedScenario].description}
             </p>
 
             {/* Direct Comparison Matrix */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               {/* White Cane Limit */}
-              <div className="p-4 rounded-xl bg-red-500/10 dark:bg-red-950/20 border border-red-500/20 space-y-1.5">
-                <div className="flex items-center gap-1.5 text-xs font-mono text-red-600 dark:text-red-400 uppercase tracking-wider font-semibold">
+              <div className="p-4 rounded-xl bg-red-500/10 dark:bg-[#3D1E1A]/40 border border-red-500/20 dark:border-[#FF9E8C]/30 space-y-1.5">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-red-600 dark:text-[#FF9E8C] uppercase tracking-wider font-semibold">
                   <X className="w-4 h-4" />
                   <span>White Cane Limitation</span>
                 </div>
-                <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                <p className="text-xs text-zinc-700 dark:text-[#C8BDB6] leading-relaxed">
                   {scenarios[selectedScenario].caneLimitation}
                 </p>
               </div>
 
               {/* BeepVision Advantage */}
-              <div className="p-4 rounded-xl bg-[#00B368]/10 dark:bg-[#00F5A0]/10 border border-[#00B368]/25 dark:border-[#00F5A0]/25 space-y-1.5">
-                <div className="flex items-center gap-1.5 text-xs font-mono text-[#00B368] dark:text-[#00F5A0] uppercase tracking-wider font-semibold">
+              <div className="p-4 rounded-xl bg-[#00B368]/10 dark:bg-[#30D158]/10 border border-[#00B368]/25 dark:border-[#30D158]/25 space-y-1.5">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-[#00B368] dark:text-[#30D158] uppercase tracking-wider font-semibold">
                   <Check className="w-4 h-4" />
                   <span>BeepVision Edge Layer</span>
                 </div>
@@ -159,27 +159,27 @@ export const Problem: React.FC = () => {
             </div>
 
             {/* Metric / Stat Callout */}
-            <div className="bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 rounded-xl p-3.5 text-xs font-mono text-zinc-700 dark:text-zinc-300 flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-[#FF5500] dark:bg-[#FF7733] shrink-0 shadow-[0_0_6px_#FF5500]" />
+            <div className="bg-black/[0.03] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 rounded-xl p-3.5 text-xs font-mono text-zinc-700 dark:text-[#C8BDB6] flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-[#FF5500] dark:bg-[#FF9E8C] shrink-0 shadow-[0_0_6px_#FF9E8C]" />
               <span>{scenarios[selectedScenario].stats}</span>
             </div>
           </div>
         </div>
 
         {/* Antimetal Comparative Landscape Table */}
-        <div className="bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 text-left space-y-6 relative shadow-xl dark:shadow-2xl">
-          <ReticleCorner size={10} className="text-[#00B368] dark:text-[#00F5A0]" />
+        <div className="bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 text-left space-y-6 relative shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)]">
+          <ReticleCorner size={10} className="text-[#00B368] dark:text-[#30D158]" />
           
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <span className="text-[11px] font-mono text-[#FF5500] dark:text-[#FF7733] font-bold uppercase tracking-[0.14em]">
+              <span className="text-[11px] font-mono text-[#FF5500] dark:text-[#FF9E8C] font-bold uppercase tracking-[0.14em]">
                 COMPETITOR ANALYSIS & LESSONS LEARNED
               </span>
               <h3 className="text-xl sm:text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight mt-1">
                 Why Previous Assistive Devices Failed in the Real World
               </h3>
             </div>
-            <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-black/5 dark:bg-white/5 px-3 py-1.5 rounded-full border border-black/10 dark:border-white/10 self-start sm:self-auto uppercase tracking-wider">
+            <span className="text-xs font-mono text-zinc-600 dark:text-[#30D158] bg-black/5 dark:bg-[#30D158]/10 px-3 py-1.5 rounded-full border border-black/10 dark:border-[#30D158]/20 self-start sm:self-auto uppercase tracking-wider">
               Source: PDF p.10–12
             </span>
           </div>

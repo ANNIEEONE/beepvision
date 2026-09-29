@@ -99,17 +99,17 @@ export const Capabilities: React.FC = () => {
   const current = features[selectedFeature];
 
   return (
-    <section id="capabilities" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#030406] border-t border-dashed border-black/10 dark:border-white/10 relative transition-colors duration-300">
+    <section id="capabilities" className="scroll-mt-28 py-24 bg-[#F8F9FA] dark:bg-[#1A1614] border-t border-black/10 dark:border-white/10 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-16 space-y-4">
-          <TechnicalBadge number="05" label="MODULAR ASSISTIVE CAPABILITIES" color="cyan" />
+          <TechnicalBadge number="05" label="Modular Assistive Capabilities" color="cyan" />
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-950 dark:text-white tracking-[-0.03em] leading-[1.05]">
-            BUILT FOR THE COMPLEXITY<br />
-            <span className="text-[#0284C7] dark:text-[#00D2FF]">OF MODERN CITIES.</span>
+            Built for the complexity<br />
+            <span className="text-[#0284C7] dark:text-[#30D158]">of modern cities.</span>
           </h2>
-          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-[#C8BDB6] leading-relaxed font-normal">
             BeepVision goes far beyond obstacle detection. From reading medication instructions to detecting sudden falls,
             every capability runs on-device with zero latency and zero data leakage.
           </p>
@@ -129,57 +129,57 @@ export const Capabilities: React.FC = () => {
                   onClick={() => setSelectedFeature(i)}
                   className={`w-full text-left p-3.5 rounded-xl transition-all border flex items-center justify-between group relative ${
                     isSelected
-                      ? 'bg-white dark:bg-white/[0.06] border-[#0284C7] dark:border-[#00D2FF]/60 shadow-md dark:shadow-[0_0_20px_rgba(0,210,255,0.15)] text-zinc-950 dark:text-white'
-                      : 'bg-white/70 dark:bg-[#06080D] border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-200'
+                      ? 'bg-white dark:bg-[#3D1E1A]/40 dark:backdrop-blur-md border-[#FF5500] dark:border-[#FF9E8C]/60 shadow-md dark:shadow-[0_4px_20px_rgba(255,158,140,0.15)] text-zinc-950 dark:text-white'
+                      : 'bg-white/70 dark:bg-[#251E1C]/40 dark:backdrop-blur-md border-black/10 dark:border-white/5 hover:border-black/20 dark:hover:border-white/15 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-200'
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
                       className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
-                        isSelected ? 'bg-[#0284C7] dark:bg-[#00D2FF] text-white dark:text-black font-bold' : 'bg-black/5 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-950 dark:group-hover:text-white'
+                        isSelected ? 'bg-[#0284C7] dark:bg-[#FF9E8C] text-white dark:text-[#1A1614] font-bold' : 'bg-black/5 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-950 dark:group-hover:text-white'
                       }`}
                     >
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#0284C7] dark:text-[#00D2FF] block">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#0284C7] dark:text-[#FF9E8C] block font-semibold">
                         {feat.badge}
                       </span>
                       <h4 className="text-xs font-semibold tracking-tight">{feat.title}</h4>
                     </div>
                   </div>
-                  <ArrowRight className={`w-3.5 h-3.5 transition-transform ${isSelected ? 'text-[#0284C7] dark:text-[#00D2FF] translate-x-1' : 'opacity-0'}`} />
+                  <ArrowRight className={`w-3.5 h-3.5 transition-transform ${isSelected ? 'text-[#0284C7] dark:text-[#FF9E8C] translate-x-1' : 'opacity-0'}`} />
                 </button>
               );
             })}
           </div>
 
           {/* Right: Feature Deep Dive Card */}
-          <div className="lg:col-span-7 bg-white dark:bg-[#06080D] border border-dashed border-black/10 dark:border-white/15 rounded-2xl p-6 sm:p-8 text-left space-y-6 relative shadow-lg dark:shadow-2xl transition-colors">
-            <ReticleCorner size={10} className="text-[#0284C7] dark:text-[#00D2FF]" />
+          <div className="lg:col-span-7 bg-white dark:bg-[#251E1C]/65 dark:backdrop-blur-2xl border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 text-left space-y-6 relative shadow-lg dark:shadow-[0_12px_36px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors">
+            <ReticleCorner size={10} className="text-[#0284C7] dark:text-[#30D158]" />
 
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-black/10 dark:border-white/10 pb-4">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#0284C7] dark:text-[#00D2FF]">
+                <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#0284C7] dark:text-[#30D158] font-semibold">
                   CAPABILITY 0{selectedFeature + 1} SPECIFICATION
                 </span>
                 <h3 className="text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight mt-1">{current.title}</h3>
               </div>
-              <span className="text-xs font-mono px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-zinc-700 dark:text-zinc-300">
+              <span className="text-xs font-mono px-3 py-1 rounded-full bg-black/5 dark:bg-[#30D158]/10 border border-black/10 dark:border-[#30D158]/20 text-zinc-700 dark:text-[#30D158] font-semibold">
                 {current.model}
               </span>
             </div>
 
-            <p className="text-sm text-zinc-700 dark:text-zinc-200 leading-relaxed font-normal">{current.shortDesc}</p>
+            <p className="text-sm text-zinc-700 dark:text-[#C8BDB6] leading-relaxed font-normal">{current.shortDesc}</p>
 
-            <div className="p-4 rounded-xl bg-[#0284C7]/10 dark:bg-[#00D2FF]/10 border border-[#0284C7]/20 dark:border-[#00D2FF]/20 space-y-1">
-              <span className="text-[10px] font-mono text-[#0284C7] dark:text-[#00D2FF] uppercase tracking-wider block font-semibold">
+            <div className="p-4 rounded-xl bg-[#0284C7]/10 dark:bg-[#3D1E1A]/40 border border-[#0284C7]/20 dark:border-[#FF9E8C]/30 space-y-1">
+              <span className="text-[10px] font-mono text-[#0284C7] dark:text-[#FF9E8C] uppercase tracking-wider block font-semibold">
                 Simulated User Audio Cue
               </span>
-              <p className="text-sm font-mono text-zinc-950 dark:text-white font-medium">{current.sampleCue}</p>
+              <p className="text-sm font-mono text-zinc-950 dark:text-[#FF9E8C] font-semibold">{current.sampleCue}</p>
             </div>
 
-            <div className="p-4 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 space-y-1">
+            <div className="p-4 rounded-xl bg-black/[0.03] dark:bg-[#1A1614]/70 dark:backdrop-blur-md border border-black/10 dark:border-white/8 space-y-1">
               <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block font-semibold">
                 Technical Execution Details
               </span>
@@ -188,7 +188,7 @@ export const Capabilities: React.FC = () => {
 
             <div className="pt-2 border-t border-black/10 dark:border-white/10 flex items-center justify-between text-xs font-mono text-zinc-600 dark:text-zinc-400">
               <span>Silicon Engine:</span>
-              <span className="text-[#059669] dark:text-[#00F5A0] font-semibold">Hailo-8 NPU + BCM2712 Quad-Core</span>
+              <span className="text-[#059669] dark:text-[#30D158] font-semibold">Hailo-8 NPU + BCM2712 Quad-Core</span>
             </div>
           </div>
         </div>
