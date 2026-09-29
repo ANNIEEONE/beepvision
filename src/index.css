@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-void: #06070B;
+    --bg-surface: #0A0D15;
+    --bg-card: #0E121D;
+    --bg-card-inner: #07090F;
+    --bg-card-hover: #141926;
+    --border-hairline: rgba(255, 255, 255, 0.09);
+    --border-dashed: rgba(255, 255, 255, 0.13);
+    --border-reticle: rgba(255, 255, 255, 0.25);
+    --laser-orange: #FF7733;
+    --laser-orange-glow: rgba(255, 119, 51, 0.25);
+    --cyber-emerald: #00F5A0;
+    --sonic-cyan: #00D2FF;
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --grid-line: rgba(255, 255, 255, 0.035);
+    --glass-nav: rgba(10, 13, 21, 0.75);
+    --glass-nav-border: rgba(255, 255, 255, 0.12);
+  }
+
+  .light, html.light {
+    --bg-void: #F8F9FA;
+    --bg-surface: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-card-inner: #F3F4F6;
+    --bg-card-hover: #F8FAFC;
+    --border-hairline: rgba(0, 0, 0, 0.08);
+    --border-dashed: rgba(0, 0, 0, 0.13);
+    --border-reticle: rgba(0, 0, 0, 0.25);
+    --laser-orange: #FF5500;
+    --laser-orange-glow: rgba(255, 85, 0, 0.20);
+    --cyber-emerald: #00B368;
+    --sonic-cyan: #0088CC;
+    --text-primary: #0A0D14;
+    --text-secondary: #4B5565;
+    --text-muted: #6B7280;
+    --grid-line: rgba(0, 0, 0, 0.045);
+    --glass-nav: rgba(255, 255, 255, 0.88);
+    --glass-nav-border: rgba(0, 0, 0, 0.10);
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    background-color: var(--bg-void);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Antimetal Architectural Blueprint Grid */
+.antimetal-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+.antimetal-crosshair {
+  background-size: 64px 64px;
+  background-image: radial-gradient(circle, var(--border-reticle) 1px, transparent 1px);
+}
+
+/* Liquid Glass Surface (Antimetal Signature) */
+.glass-surface {
+  background: var(--glass-nav);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid var(--glass-nav-border);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 0 1px 1px var(--glass-nav-border);
+}
+
+/* Light mode specific card shadow */
+.light .light-card-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Anime.js Kinetic Laser Scan Animation */
+@keyframes laser-scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000%);
+    opacity: 0;
+  }
+}
+
+.animate-laser-scan {
+  animation: laser-scan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Radar Sweep */
+@keyframes radar-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep {
+  animation: radar-spin 3.5s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hairline);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--laser-orange);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

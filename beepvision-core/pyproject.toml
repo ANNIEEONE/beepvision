@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beepvision-core"
+version = "0.1.0"
+description = "Embedded Edge AI & Sensor Fusion Pipeline for BeepVision Assistive Wearable"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "BeepVision Engineering Team" }
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+hailo = [
+    "hailo-platform", # Available on Raspberry Pi 5 with Hailo-8 AI HAT
+]
+
+[project.scripts]
+beepvision-sim = "run_simulation:main"
