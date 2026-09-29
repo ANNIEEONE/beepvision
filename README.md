@@ -4,6 +4,7 @@
 
 ![BeepVision Banner](screenshots/01_dark_hero.png)
 
+[![Netlify Status](https://img.shields.io/badge/Netlify-LIVE_DEMO-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://beepvision.netlify.app)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -14,6 +15,8 @@
 **"The goal isn't to replace vision. It's to add another layer of awareness."**
 
 *An on-device AI assistive wearable that fuses high-speed camera vision, solid-state LiDAR, and peripheral ultrasound into an intuitive sensory awareness layer.*
+
+🌐 **[Live Demo: beepvision.netlify.app](https://beepvision.netlify.app)**
 
 [Explore Features](#core-features) • [Hardware Architecture](#hardware-architecture) • [Screenshots](#visual-tour--screenshots) • [Getting Started](#getting-started) • [Bill of Materials](#bill-of-materials-bom)
 
