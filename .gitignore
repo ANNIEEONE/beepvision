@@ -29,4 +29,6 @@ brag-output/
 *.wav
 *.m4a
 playwright-artifacts/
-
+screenshots/
+capture-pi-npu.cjs
+.netlify/

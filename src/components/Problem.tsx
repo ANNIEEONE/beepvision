@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, ShieldAlert, AlertTriangle, Sparkles, ArrowRight, X, Check } from 'lucide-react';
 import { ReticleCorner, TechnicalBadge } from './ReticleCorner';
+import { TextRepel } from './ui/TextRepel';
 
 export const Problem: React.FC = () => {
   const [selectedScenario, setSelectedScenario] = useState<number>(0);
@@ -229,13 +230,32 @@ export const Problem: React.FC = () => {
           </div>
         </div>
 
-        {/* Antimetal Signature Philosophy Statement */}
-        <div className="mt-12 p-8 sm:p-12 rounded-2xl bg-white dark:bg-white/[0.02] border border-dashed border-black/15 dark:border-white/20 text-center relative overflow-hidden shadow-sm dark:shadow-none">
+        {/* Antimetal Signature Philosophy Statement with Text Repel */}
+        <div className="mt-12 p-8 sm:p-12 rounded-2xl bg-white dark:bg-white/[0.02] border border-dashed border-black/15 dark:border-white/20 text-center relative overflow-hidden shadow-sm dark:shadow-none group">
           <ReticleCorner size={12} className="text-[#FF5500] dark:text-[#FF7733]" />
-          <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-zinc-950 dark:text-white leading-relaxed max-w-4xl mx-auto tracking-tight">
-            “BeepVision doesn’t replace the user’s independence.<br />
-            <span className="text-[#FF5500] dark:text-[#FF7733]">It gives them another layer of awareness.</span>”
-          </p>
+          <div className="text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed max-w-4xl mx-auto tracking-tight">
+            <TextRepel
+              segments={[
+                {
+                  text: "“BeepVision doesn’t replace the user’s independence.",
+                  className: "text-zinc-950 dark:text-white"
+                },
+                {
+                  text: "It gives them another layer of awareness.”",
+                  className: "text-[#FF5500] dark:text-[#FF7733]"
+                }
+              ]}
+              radius={130}
+              strength={48}
+              stiffness={190}
+              damping={14}
+              mass={0.4}
+              className="w-full justify-center"
+            />
+          </div>
+          <div className="mt-4 text-[11px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 opacity-60 group-hover:opacity-100 transition-opacity">
+            [ Move cursor or touch to repel letters · Magnetic forcefield ]
+          </div>
         </div>
 
       </div>
